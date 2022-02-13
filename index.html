@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <script src="https://kit.fontawesome.com/3853406442.js" crossorigin="anonymous"></script>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <header class="header">
+      <button style="visibility: hidden">Hold IT!</button>
+      <h1 class="header__title">To-do List</h1>
+      <button class="themeBtn" id="themeBtn"><i class="fa fa-moon"></i></button>
+    </header>
+    <main class="main">
+      <nav class="statebar" id="stateBar">
+        <ul class="stateList">
+          <li class="stateItem itemActive" id="stateOne">All</li>
+          <li class="stateItem">Active</li>
+          <li class="stateItem">Complete</li>
+        </ul>
+        <div class="posIndicator" id="posIndicator"></div>
+      </nav>
+      <div class="addTaskPanel">
+        <button class="addTaskBtn">Add Task</button>
+        <div class="modalFrameCurtain" id="modalFrame">
+          <div class="modalFrame">
+            <h2 class="modalFrame__title">Add Event</h2>
+            <input class="taskNameInput" name="taskTitle" id="taskTitle" pattern="" placeholder="Place task's name" required>
+            <textarea class="taskNameDesc" name="taskDesc" id="taskDesc" cols="40" rows="5" placeholder="Provide a brief description" required></textarea>.
+            <div class="modalBtns">
+              <button class="modalAddBtn" id="submitTask">Add Task</button>
+              <button class="modalCancelBtn">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="taskListContainer" id="taskListContainer">
+        <ul class="taskList" id="taskList"></ul>
+      </div>
+    </main>
+
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
